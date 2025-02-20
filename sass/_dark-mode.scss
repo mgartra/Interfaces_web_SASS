@@ -1,0 +1,57 @@
+/* Modo oscuro */
+body.dark-mode {
+    background-color: $color-fondo-oscuro;
+    color: $color-texto-oscuro;
+
+    /* Estilos para el header en modo oscuro */
+    header {
+        background-color: $color-secundario;
+    }
+
+    .mensaje-envio {
+        background-color: $color-fondo-oscuro;
+        color: $color-texto-oscuro;
+    }
+    
+    
+
+    /* Estilos para las tarjetas de producto en modo oscuro */
+    .producto {
+        background-color: darken($color-fondo-oscuro, 5%);
+        color: $color-texto-oscuro;
+    }
+
+    .producto h4 {
+        color: $color-texto-oscuro;
+    }
+
+    .producto .precio {
+        color: $color-texto-oscuro;
+    }
+
+    /* Estilos para los botones en modo oscuro */
+    .comprar, .ver-mas {
+        background-color: $color-boton-oscuro;
+        color: $color-secundario-oscuro;
+        font-style: bold;
+        font-size: 18px;
+    }
+
+    .comprar:hover, .ver-mas:hover {
+        background-color: darken($color-boton-oscuro, 10%);
+    }
+
+    /* Estilos para el footer en modo oscuro */
+    footer {
+        background-color: $color-secundario;
+        color: $color-principal;
+    }
+
+    .footer-links a {
+        color: $color-principal;
+    }
+
+    .footer-links a:hover {
+        color: $color-principal-oscuro;
+    }
+}

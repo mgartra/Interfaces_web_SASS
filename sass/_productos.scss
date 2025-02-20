@@ -1,0 +1,151 @@
+@import 'variables';
+@import 'mixins';
+
+/* 🔹 Sección de categorías */
+.categorias {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* 🔹 Contenedor de cada categoría */
+.categoria {
+    margin-bottom: 40px;
+}
+
+/* 🔹 Títulos de cada categoría */
+.categoria h3 {
+    font-size: clamp(14px, 2vw, 24px);
+    color: $color-principal;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    border-color: $color-secundario;
+    opacity: 0.8;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: $color-secundario;
+    width: 15%;
+
+    @include respond-to("laptop-medium") {
+        width: 100%; // Ajusta el ancho en móviles
+    }
+
+    @include respond-to("mobile-large") {
+        width: 100%; // Ajusta el ancho en móviles
+    }
+}
+
+/* 🔹 Contenedor de productos */
+.productos {
+    @include grid-productos(6); // 6 columnas por defecto (para desktop-large y desktop-medium)
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+
+    // Ajustes para laptop-medium (3 columnas)
+    @include respond-to("laptop-medium") {
+        @include grid-productos(3);
+    }
+
+    // Ajustes para mobile-large (2 columnas)
+    @include respond-to("mobile-large") {
+        @include grid-productos(2);
+    }
+
+    // Ajustes para mobile-medium y mobile-small (1 columna)
+    @include respond-to("mobile-medium") {
+        @include grid-productos(1);
+    }
+    @include respond-to("mobile-small") {
+        @include grid-productos(1);
+    }
+}
+
+/* 🔹 Estilos de las tarjetas de productos */
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    @include sombra();
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+
+    &:hover {
+        transform: translateY(-5px);
+        @include sombra(rgba(0, 0, 0, 0.2));
+    }
+
+    @include respond-to("mobile-large") {
+        transition: none;
+        transform: none;
+        box-shadow: none;
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+
+    img {
+        width: 200px; // Ajusta el tamaño deseado
+        height: 250px; // Mantiene la proporción uniforme
+        object-fit: cover; // Ajusta la imagen para llenar el espacio sin distorsión
+        border-radius: 8px;
+    }
+
+    h4 {
+        font-size: 20px;
+        margin: 10px 0;
+        color: $color-principal;
+    }
+
+    .precio {
+        font-size: 18px;
+        font-weight: bold;
+        color: darken($color-principal, 10%);
+    }
+}
+
+/* 🔹 Botón "Ver más" */
+.ver-mas {
+    @include boton($color-principal, white);
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.comprar {
+    @include boton($color-principal, white);
+    display: inline-block;
+    margin-top: 15px;
+
+    &:hover {
+        background-color: $color-boton;
+        color: $color-principal;
+        font-weight: bold;
+    }
+}
+.btn-volver {
+    @include boton(#ccc, #333); // Estilo para el botón "Volver sin comprar"
+    display: inline-block;
+    margin: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    color:$color-principal;
+    &:hover {
+        background-color: $color-principal;
+        color: white;
+    }
+}
+
+#temporada a,
+#outlet a,
+#preventa a,
+#rebajas a {
+    text-decoration: none;
+
+    &:hover {
+        @include boton($color-principal, white);
+        width: 100%;
+    }
+}

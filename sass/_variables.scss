@@ -1,0 +1,44 @@
+// 🎨 Colores principales
+$color-principal: #600b26;
+$color-secundario: #e9d4cd;
+$color-fondo: #f5f5f5;
+$color-texto: #600b26bf;
+$color-boton: #ac9c8d;
+$color-categoria: #dda15e;
+$color-hover: darken($color-boton, 20%); // Oscurecer un 20% el color en hover
+$white: #fefdff;
+$wine: #733c4b;
+$rosy-brown: #c49ea6;
+$misty-rose: #e0ccce;
+$color-neutro: #c1bfb5;
+
+// Variaciones
+$color-texto-suave: lighten($wine, 15%);
+$color-botones-hover: darken($rosy-brown, 10%);
+$color-fondo-sutil-claro: lighten($misty-rose, 5%);
+
+// 🔤 Tipografías
+$fuente-titulos: 'Poppins', sans-serif;
+$fuente-texto: 'Lora', serif;
+
+// 📏 Medidas globales
+$ancho-maximo: 1200px;
+$borde-redondeado: 8px;
+$padding-general: 20px;
+
+// Colores para el modo oscuro
+$color-fondo-oscuro: #600b26; // Fondo oscuro
+$color-texto-oscuro: #e9d4cd; // Texto claro
+$color-principal-oscuro: #733c4b; // Color principal en modo oscuro
+$color-secundario-oscuro: #600b26; // Color secundario en modo oscuro
+$color-boton-oscuro: #ac9c8d; // Color de botones en modo oscuro
+
+// Tamaños de Breakpoints
+$breakpoints: (
+    "mobile-small": 360px,
+    "mobile-medium": 375px,
+    "mobile-large": 720px,
+    "laptop-medium": 1366px,
+    "desktop-medium": 1440px,
+    "desktop-large": 1920px
+);

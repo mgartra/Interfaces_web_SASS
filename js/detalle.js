@@ -1,0 +1,130 @@
+// Mapa de productos en JavaScript
+const productos = {
+    /* 1: { titulo: "Camisa Oversize Estampada", descripcion: "Estilo francés icónico con un toque moderno.", precio: 19.99, categoria: "temporada", imagen: "moda1.jpg" },
+    2: { titulo: "Abrigo Beige Elegante", descripcion: "Abrigo largo con ajuste sofisticado y textura suave.", precio: 79.99, categoria: "preventa", imagen: "moda2.jpg" },
+    3: { titulo: "Vestido Azul con Estampado", descripcion: "Vestido ligero con botones y diseño floral minimalista.", precio: 45.99, categoria: "rebajas", imagen: "moda3.jpg" },
+    4: { titulo: "Vestido Blanco Vaporoso", descripcion: "Vestido de tela ligera con vuelo y un diseño romántico.", precio: 59.99, categoria: "temporada", imagen: "moda4.jpg" },
+    5: { titulo: "Botines Rojos de Cuero", descripcion: "Botines de tacón medio con diseño en cuero grabado.", precio: 65.99, categoria: "outlet", imagen: "moda5.jpg" },
+    6: { titulo: "Botines Negros de Tacón", descripcion: "Elegantes y sofisticados, perfectos para la noche.", precio: 70.99, categoria: "rebajas", imagen: "moda6.jpg" } */
+    1: {titulo: "Camisa Oversize Estampada", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Nostra bibendum duis in, lobortis sapien vehicula sem. Accumsan nibh potenti augue, posuere praesent arcu. Ut nisl elementum turpis faucibus nostra feugiat torquent.", precio: 19.99, categoria: "temporada", imagen: "moda1.jpg"},
+    2: {titulo: "Blusa Casual de Algodón", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Ultrices inceptos libero magna potenti lobortis venenatis diam tortor. Interdum nostra cubilia nunc nisi placerat hendrerit class.", precio: 79.99, categoria: "preventa", imagen: "moda2.jpg"},
+    3: {titulo: "Vestido Elegante Beige", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Ac habitant maecenas dignissim; inceptos sit eu placerat enim fringilla. Curae sit bibendum at suspendisse pellentesque. Netus risus maecenas eu condimentum neque?", precio: 45.99, categoria: "rebajas", imagen: "moda3.jpg"},
+    4: {titulo: "Vestido Blanco Bordado", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper. Sociosqu per inceptos diam nullam rhoncus fringilla nisi ridiculus hac. Integer efficitur ligula; ac et molestie risus semper suspendisse nec.", precio: 59.99, categoria: "temporada", imagen: "moda4.jpg"},
+    5: {titulo: "Short vaquero", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Auctor erat eget vestibulum, rhoncus adipiscing ridiculus non tellus.", precio: 25.99, categoria: "outlet", imagen: "moda5.jpg"},
+    6: {titulo: "Jersey Otoño", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper. Sociosqu per inceptos diam nullam rhoncus fringilla nisi ridiculus hac. Integer efficitur ligula; ac et molestie risus semper suspendisse nec.", precio: 70.99, categoria: "rebajas", imagen: "moda6.jpg"},
+    7: {titulo: "Blusa Rojo Carmesí", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 85.99, categoria: "preventa", imagen: "moda7.jpg"},
+    8: {titulo: "Gabardina Amarilla con Estilo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Iaculis finibus cursus turpis; vehicula laoreet ligula.", precio: 42.99, categoria: "temporada",imagen: "moda8.jpg"},
+    9: {titulo: "Pantalón rayas verticales", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Iaculis finibus cursus turpis; vehicula laoreet ligula.", precio: 99.99, categoria: "outlet", imagen: "moda9.jpg"},
+    10:{titulo: "Vestido Básico con vuelo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 89.99, categoria: "rebajas", imagen: "moda10.jpg"},
+    11: {titulo: "Vestido Rojo Floral", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 24.99, categoria: "temporada", imagen: "moda11.jpg"},
+    12: {titulo: "Conjunto Primavera", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Iaculis finibus cursus turpis; vehicula laoreet ligula.", precio: 49.99, categoria: "preventa", imagen: "moda12.jpg"},
+    13: {titulo: "Vestido Vera Blanco", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Iaculis finibus cursus turpis; vehicula laoreet ligula.", precio: 129.99, categoria: "outlet", imagen: "moda13.jpg"},
+    14: {titulo: "Camisa básica Mandarina", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 69.99, categoria: "rebajas", imagen: "moda14.jpg"},
+    15: {titulo: "Chaqueta Oversize Negra", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 75.99, categoria: "preventa", imagen: "moda15.jpg"},
+    16: {titulo: "Falda Kilt", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 55.99, categoria: "temporada", imagen: "moda16.jpg"},
+    17: {titulo: "Jersey Beige Casual", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper. Sociosqu per inceptos diam nullam rhoncus fringilla nisi ridiculus hac.", precio: 39.99, categoria: "outlet", imagen: "moda17.jpg"},
+    18: {titulo: "Vestido Rojo Vintage", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper. Sociosqu per inceptos diam nullam rhoncus fringilla nisi ridiculus hac.", precio: 21.99, categoria: "rebajas", imagen: "moda18.jpg"},
+    19: {titulo: "Jersey Oversize Lana", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper. Sociosqu per inceptos diam nullam rhoncus fringilla nisi ridiculus hac.", precio: 59.99, categoria: "preventa", imagen: "moda19.jpg"},
+    20: {titulo: "Traje Elengante Turquesa", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 99.99, categoria: "outlet", imagen: "moda20.jpg"},
+    21: {titulo: "Top de encaje negro", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 64.99, categoria: "temporada", imagen: "moda21.jpg"},
+    22: {titulo: "Vestido Negro Love", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 49.99, categoria: "rebajas", imagen: "moda22.jpg"},
+    23: {titulo: "Blazer Básica Hueso", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 119.99, categoria: "preventa", imagen: "moda23.jpg"},
+    24: {titulo: "Blazer Básica B & W", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 67.99, categoria: "outlet", imagen: "moda24.jpg"},
+    25: {titulo: "Vestido Étnico", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 92.99, categoria: "temporada", imagen: "moda25.jpg"},
+    26: {titulo: "Conjunto Sofisticado", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 79.99, categoria: "rebajas", imagen: "moda26.jpg"},
+    27: {titulo: "Chaleco Marrón Clásico", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 29.99, categoria: "preventa", imagen: "moda27.jpg"},
+    28: {titulo: "Blazer Beige Urbana", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 34.99, categoria: "outlet", imagen: "moda28.jpg"},
+    29: {titulo: "Blazer Básica Fucsia", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 149.99, categoria: "temporada", imagen: "moda29.jpg"},
+    30: {titulo: "Abrigo Nube de Algodón", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 74.99, categoria: "rebajas", imagen: "moda30.jpg"},
+    31: {titulo: "Conjunto África", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 79.99, categoria: "preventa", imagen: "moda31.jpg"},
+    32: {titulo: "Pantalón Básico Elegante", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 59.99, categoria: "outlet", imagen: "moda32.jpg"},
+    33: {titulo: "Vestido Cuba Estampado", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 44.99, categoria: "temporada", imagen: "moda33.jpg"},
+    34: {titulo: "Jersey Flores Bordadas", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 109.99, categoria: "rebajas", imagen: "moda34.jpg"},
+    35: {titulo: "Vestido Long Mostaza", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 18.99, categoria: "preventa", imagen: "moda35.jpg"},
+    36: {titulo: "Chaqueta Clásica Vaquera", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 69.99, categoria: "outlet", imagen: "moda36.jpg"},
+    37: {titulo: "Abrigo Pluma Azul", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 99.99, categoria: "temporada", imagen: "moda37.jpg"},
+    38: {titulo: "Conjunto Otoño", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 29.99, categoria: "rebajas", imagen: "moda38.jpg"},
+    39: {titulo: "Conjunto Elegante Blanco", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 129.99, categoria: "preventa", imagen: "moda39.jpg"},
+    40: {titulo: "Kimono Básico Rojo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 74.99, categoria: "outlet", imagen: "moda40.jpg"},
+    41: {titulo: "Botas Altas Black Metal", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Nostra bibendum duis in, lobortis sapien vehicula sem. Accumsan nibh potenti augue, posuere praesent arcu. Ut nisl elementum turpis faucibus nostra feugiat torquent.", precio: 89.99, categoria: "temporada", imagen: "moda41.jpg"},
+    42: {titulo: "Botines Casuales Marrones", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Ultrices inceptos libero magna potenti lobortis venenatis diam tortor. Interdum nostra cubilia nunc nisi placerat hendrerit class.", precio: 79.99, categoria: "preventa", imagen: "moda42.jpg"},
+    43: {titulo: "Sombrero Casual Black", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Ac habitant maecenas dignissim; inceptos sit eu placerat enim fringilla. Curae sit bibendum at suspendisse pellentesque. Netus risus maecenas eu condimentum neque?", precio: 45.99, categoria: "rebajas", imagen: "moda43.jpg"},
+    44: {titulo: "Vestido Básico Verde", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper. Sociosqu per inceptos diam nullam rhoncus fringilla nisi ridiculus hac. Integer efficitur ligula; ac et molestie risus semper suspendisse nec.", precio: 59.99, categoria: "temporada", imagen: "moda44.jpg"},
+    45: {titulo: "Botines Piel de Serpiente", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Auctor erat eget vestibulum, rhoncus adipiscing ridiculus non tellus.", precio: 65.99, categoria: "outlet", imagen: "moda45.jpg"},
+    46: {titulo: "Gabardina Elegante Negra", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper. Sociosqu per inceptos diam nullam rhoncus fringilla nisi ridiculus hac. Integer efficitur ligula; ac et molestie risus semper suspendisse nec.", precio: 70.99, categoria: "rebajas", imagen: "moda46.jpg"},
+    47: {titulo: "Boina Rojo Burdeos", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 85.99, categoria: "preventa", imagen: "moda47.jpg"},
+    48: {titulo: "Botines Tacón Alto", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 42.99, categoria: "temporada", imagen: "moda48.jpg"},
+    49: {titulo: "Blusa Blanca Volantes", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 99.99, categoria: "outlet", imagen: "moda49.jpg"},
+    50: {titulo: "Bolso Marfil 3 departamentos", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 89.99, categoria: "rebajas", imagen: "moda50.jpg"},
+    51: {titulo: "Vestido Amarillo con Estampado", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 24.99, categoria: "temporada", imagen: "moda51.jpg"},
+    52: {titulo: "Vestido Cuello Alto", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 49.99, categoria: "preventa", imagen: "moda52.jpg"},
+    53: {titulo: "Conjunto Cargo Naranja", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 129.99, categoria: "outlet", imagen: "moda53.jpg"},
+    54: {titulo: "Vestido Floral Largo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 69.99, categoria: "rebajas", imagen: "moda54.jpg"},
+    55: {titulo: "Vaqueros Básicos Campana", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 75.99, categoria: "preventa", imagen: "moda55.jpg"},
+    56: {titulo: "Botines Tacón Fino", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 55.99, categoria: "temporada", imagen: "moda56.jpg"},
+    57: {titulo: "Botas Altas Tacón Fino", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 39.99, categoria: "outlet", imagen: "moda57.jpg"},
+    58: {titulo: "Botas Altas Tacón Cuadrado", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 21.99, categoria: "rebajas", imagen: "moda58.jpg"},
+    59: {titulo: "Gabardina Gris Clásica", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 59.99, categoria: "preventa", imagen: "moda59.jpg"},
+    60: {titulo: "Chaqueta Flecos Cowboy", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 99.99, categoria: "outlet", imagen: "moda60.jpg"},
+    61: {titulo: "Chaqueta Cuadros Vichy", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 64.99, categoria: "temporada", imagen: "moda61.jpg"},
+    62: {titulo: "Gabardina Elegante Beige", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 49.99, categoria: "rebajas", imagen: "moda62.jpg"},
+    63: {titulo: "Vestido Lunares con Botones", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 119.99, categoria: "preventa", imagen: "moda63.jpg"},
+    64: {titulo: "Falda Plisada", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 67.99, categoria: "outlet", imagen: "moda64.jpg"},
+    65: {titulo: "Botines Piel Cocodrilo Rojo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 92.99, categoria: "temporada", imagen: "moda65.jpg"},
+    66: {titulo: "Botines Piel Broche", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 79.99, categoria: "rebajas", imagen: "moda66.jpg"},
+    67: {titulo: "Botas Altas Militares", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 29.99, categoria: "preventa", imagen: "moda67.jpg"},
+    68: {titulo: "Falda Elegante Plisada", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 34.99, categoria: "outlet", imagen: "moda68.jpg"},
+    69: {titulo: "Gabardina Nature", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 149.99, categoria: "temporada", imagen: "moda69.jpg"},
+    70: {titulo: "Top Corset Blanco", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 74.99, categoria: "rebajas", imagen: "moda70.jpg"},
+    71: {titulo: "Gorro Juvenil Polar", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 79.99, categoria: "preventa", imagen: "moda71.jpg"},
+    72: {titulo: "Jersey Básico Morado", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 59.99, categoria: "outlet", imagen: "moda72.jpg"},
+    73: {titulo: "Chaqueta de Pelo Largo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 44.99, categoria: "temporada", imagen: "moda73.jpg"},
+    74: {titulo: "Botines Urbanos Beige", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 109.99, categoria: "rebajas", imagen: "moda74.jpg"},
+    75: {titulo: "Botines Tejanos", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 18.99, categoria: "preventa", imagen: "moda75.jpg"},
+    76: {titulo: "Conjunto Ante Rojo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 69.99, categoria: "outlet", imagen: "moda76.jpg"},
+    77: {titulo: "Blusa Elegante con Lazo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 34.99, categoria: "temporada", imagen: "moda77.jpg"},
+    78: {titulo: "Fórmula Básica Cuello Alto", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 29.99, categoria: "rebajas", imagen: "moda78.jpg"},
+    79: {titulo: "Vestido Casual Negro", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 129.99, categoria: "preventa", imagen: "moda79.jpg"},
+    80: {titulo: "Gabardina Cuadros Vichy", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 74.99, categoria: "outlet", imagen: "moda80.jpg"},
+    81: {titulo: "Blusa Estampado Cebra", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 79.99, categoria: "temporada", imagen: "moda81.jpg"},
+    82: {titulo: "Chaqueta Vaquera", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 39.99, categoria: "outlet", imagen: "moda82.jpg"},
+    83: {titulo: "Bolso Piel Cocodrilo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 69.99, categoria: "temporada", imagen: "moda83.jpg"},
+    84: {titulo: "Vestido Midi Rayas", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 109.99, categoria: "temporada", imagen: "moda84.jpg"},
+    85: {titulo: "Chaqueta Larga Vichy", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 18.99, categoria: "preventa", imagen: "moda85.jpg"},
+    86: {titulo: "Bolso Elegante Contraste", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Eros mauris enim potenti velit efficitur ullamcorper.", precio: 69.99, categoria: "outlet", imagen: "moda86.jpg"},
+    87: {titulo: "Pantalón Pata de Elefante Bordado ", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 14.99, categoria: "temporada", imagen: "moda87.jpg"},
+    88: {titulo: "Bolso Grande Ante Marrón", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 39.99, categoria: "temporada", imagen: "moda88.jpg"},
+    89: {titulo: "Conjunto Arte", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 129.99, categoria: "preventa", imagen: "moda89.jpg"},
+    90: {titulo: "Camisa Vestido", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 74.99, categoria: "outlet", imagen: "moda90.jpg"},
+    91: {titulo: "Pantalón Elegante Salmón", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 79.99, categoria: "temporada", imagen: "moda91.jpg"},
+    92: {titulo: "Conjunto Leopardo", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 39.99, categoria: "outlet", imagen: "moda92.jpg"},
+    93: {titulo: "Maxi Bolso Piel Cocodrilo", descripcion: "Diseño delicado y femenino para la primavera.", precio: 69.99, categoria: "temporada", imagen: "moda93.jpg"},
+    94: {titulo: "Bolso Rojo Metal", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 109.99, categoria: "rebajas", imagen: "moda94.jpg"},
+    95: {titulo: "Bolso Básico de Piel Marrón", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 18.99, categoria: "preventa", imagen: "moda95.jpg"},
+    96: {titulo: "Vestido Básico Satén", descripcion: "Perfecto para eventos formales con un toque sofisticado.", precio: 69.99, categoria: "outlet", imagen: "moda96.jpg"},
+    97: {titulo: "Bolso Marrón Correas ", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 14.99, categoria: "temporada", imagen: "moda97.jpg"},
+    98: {titulo: "Vaquero Clásico", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 29.99, categoria: "rebajas", imagen: "moda98.jpg"},
+    99: {titulo: "Conjunto Básico", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 129.99, categoria: "preventa", imagen: "moda99.jpg"},
+    100: {titulo: "Vaquero Mom Fit", descripcion: "Lorem ipsum odor amet, consectetuer adipiscing elit. Gravida nulla nascetur nostra nibh elit cursus.", precio: 74.99, categoria: "outlet", imagen: "moda100.jpg"},
+};
+    
+
+// Obtener el ID del producto desde la URL
+const params = new URLSearchParams(window.location.search);
+const idProducto = params.get("id");
+
+// Verificar si el producto existe
+if (productos[idProducto]) {
+    const producto = productos[idProducto];
+
+    // Modificar el contenido del HTML con los datos del producto
+    document.getElementById("titulo-producto").textContent = producto.titulo;
+    document.getElementById("descripcion-producto").textContent = producto.descripcion;
+    document.getElementById("precio-producto").textContent = `$${producto.precio}`;
+    document.getElementById("categoria-producto").textContent = `Categoría: ${producto.categoria}`;
+    
+    // Modificar la imagen
+    document.getElementById("imagen-producto").src = `Imagenes/moda${idProducto}.jpg`;
+} else {
+    document.querySelector(".detalle-producto").innerHTML = "<h2>Producto no encontrado</h2>";
+}

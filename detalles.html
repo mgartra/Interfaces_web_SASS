@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="Imagenes/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="mensaje-envio">
+            <h2>GASTOS DE ENVÍO GRATIS EN PEDIDOS SUPERIORES A 30€ | SOLO EN PENÍNSULA</h2>
+        </div>
+        <div class="container-header">
+            <div class="logo">
+              <img src="Imagenes/logo.png" alt="Logotipo de la marca">
+            </div>
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="conoceme.html">Conóceme</a></li>
+                    <li class="dropdown">
+                        <a href="#">Categorías <img src="Imagenes/down.png"></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="temporada.html">Temporada</a></li>
+                            <li><a href="outlet.html">Outlet</a></li>
+                            <li><a href="preventa.html">Preventa</a></li>
+                            <li><a href="rebajas.html">Rebajas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                   
+                </ul>
+            </nav>
+            <nav class="menu-iconos">
+                <ul>
+                    <li> <a href="#" class="carrito"><img src="Imagenes/bolso-claro.png" alt="Carrito"></a></li>
+                    <li> <a href="#" id="theme-toggle"><img src="Imagenes/dia.png" alt="Modo claro en la interfaz"></a></li>
+                    <li> <a href="#" id="menu-toggle" class="hamburguesa"><img src="Imagenes/bar-de-hamburguesas.png" alt="Menú hamburguesa"></a></li>
+                    
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+    <section>
+        <div class="detalle-producto">
+            <div class="imagen-producto">
+                <img id="imagen-producto" src="" alt="Imagen del producto">
+            </div>
+            <div id="info-producto">
+                <h1 id="titulo-producto"></h1>
+                <p id="descripcion-producto"></p>
+                <p id="precio-producto"></p>
+                <p id="categoria-producto"></p>
+        
+                <!-- Mover el selector de tallas aquí -->
+                <div class="selector-tallas">
+                    <label for="tallas">Selecciona tu talla:</label>
+                    <select id="tallas" name="tallas">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+        
+                <!-- Mover las acciones aquí -->
+                <div class="acciones">
+                    <a href="#" class="btn-comprar">Añadir al carrito</a>
+                    <a href="#" class="btn-favoritos">Añadir a favoritos</a>
+                    <a href="index.html" class="btn-volver">Volver sin comprar</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2025 Mi Tienda. Todos los derechos reservados.</p>
+            <div class="redes-sociales">
+                <a href="#"><img src="Imagenes/facebook-modo-claro.png" alt="Facebook"></a>
+                <a href="#"><img src="Imagenes/instagram-modo-claro.png" alt="Instagram"></a>
+                <a href="#"><img src="Imagenes/tik-tok-modo-claro.png" alt="Tik tok"></a>
+            </div>
+            <nav class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/detalle.js"></script>
+    <script src="js/theme.js"></script>
+
+</body>
+</html>

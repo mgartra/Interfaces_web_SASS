@@ -1,0 +1,87 @@
+.contacto {
+    min-height: 100vh;
+    padding: 80px;
+    position: relative;
+    text-align: center;
+
+    @include respond-to("mobile-large") {
+        padding: 40px 20px; // Reduce el padding en móviles
+    }
+
+    .contacto-group {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:10%;
+
+        @include respond-to("mobile-large") {
+            flex-direction: column; // Cambia a columna en móviles
+        }
+    }
+
+    .form-contact {
+        width: 50%;
+
+        @include respond-to("mobile-large") {
+            width: 100%; // Ocupa todo el ancho en móviles
+            float: none;
+        }
+    }
+
+    .form-control {
+        width: 85%;
+        border: 1.5px solid #c7c7c7;
+        padding: 0.8rem;
+        border-radius: 5px;
+        margin: 1.2rem 0; // Ajusta el margen
+        display: block;
+        font-size: 1rem;
+
+        @include respond-to("mobile-large") {
+            width: 100%; // Ocupa todo el ancho en móviles
+        }
+    }
+
+    .submt-btn {
+        display: block;
+        font-size: 1rem;
+        text-transform: uppercase;
+        background: $color-principal;
+        color:$color-secundario;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        margin: 1.2rem 0; // Ajusta el margen
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken(#0C1142, 10%); // Efecto hover
+        }
+
+        @include respond-to("mobile-large") {
+            width: 100%; // Ocupa todo el ancho en móviles
+        }
+    }
+
+    .contacto-img {
+        width: 50%;
+        overflow: hidden;
+
+        @include respond-to("mobile-large") {
+            width: 100%; // Ocupa todo el ancho en móviles
+            margin-top: 20px; // Añade espacio entre el formulario y la imagen
+        }
+    }
+
+    img {
+        width: 50%; // Ajusta el ancho de la imagen
+        height: auto; // Mantiene la proporción
+        object-fit: cover;
+
+        @include respond-to("mobile-large") {
+            height: auto; // Ajusta la altura en móviles
+            visibility: hidden;
+        }
+    }
+}

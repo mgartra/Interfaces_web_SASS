@@ -1,0 +1,57 @@
+@import 'variables';
+
+/* 🔄 Reset CSS: Elimina márgenes y paddings predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 📜 Estilos globales */
+body {
+    font-family: $fuente-texto;
+    background-color: $color-fondo;
+    color: $color-texto;
+    line-height: 1.6;
+}
+
+/* 🏷️ Estilos para títulos */
+h1, h2, h3 {
+    font-family: $fuente-titulos;
+    
+}
+
+.contenido {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 50px;
+    margin: 30px;
+
+    @include respond-to("mobile-large") {
+        flex-direction: column; // Cambia a columna en móviles
+        gap: 20px;
+    }
+}
+
+img {
+    border-radius: 25px;
+    max-width: 100%; // Asegura que las imágenes no se desborden
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+
+    @include respond-to("mobile-large") {
+        flex-direction: column; // Cambia a columna en móviles
+    }
+}
+
+#suscripcion {
+    @include boton($color-principal, white);
+    margin: 15px;
+}

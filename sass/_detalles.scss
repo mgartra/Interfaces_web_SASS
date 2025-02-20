@@ -1,0 +1,92 @@
+@import "variables";
+@import "mixins";
+
+.detalle-producto {
+    display: flex;
+    gap: 40px;
+    max-width: $ancho-maximo;
+    margin: 0 auto;
+    padding: $padding-general;
+
+    @include respond-to("mobile-large") {
+        flex-direction: column; // Cambia a columna en móviles
+        gap: 20px;
+    }
+
+    .imagen-producto {
+        flex: 1;
+
+        img {
+            width: 100%;
+            border-radius: $borde-redondeado;
+            @include sombra();
+        }
+    }
+
+    #info-producto {
+        flex: 1;
+        padding: $padding-general;
+
+        h1 {
+            font-size: 32px;
+            font-family: $fuente-titulos;
+            color: $color-texto;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            font-family: $fuente-texto;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    }
+
+    .selector-tallas {
+        margin-bottom: 30px;
+
+        label {
+            font-size: 16px;
+            color: $color-texto;
+            margin-right: 10px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: $borde-redondeado;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    .acciones {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+
+        @include respond-to("mobile-large") {
+            flex-direction: column; // Cambia a columna en móviles
+        }
+
+        .btn-comprar {
+            @include boton($color-principal, white);
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .btn-favoritos {
+            @include boton($color-secundario, $color-principal);
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .btn-volver {
+            @include boton(#ccc, #333); // Estilo para el botón "Volver sin comprar"
+            display: inline-block;
+            margin-top: 30px;
+        }
+    }
+}

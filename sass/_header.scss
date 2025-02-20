@@ -1,0 +1,136 @@
+@import 'variables';
+@import 'mixins';
+@import 'menu';
+
+header {
+    background-color: $color-secundario;
+    min-height: 450px;
+
+    @include respond-to("laptop-medium") {
+        min-height: 250px;
+    }
+}
+
+/* 🔹 Mensaje de Envío */
+.mensaje-envio {
+    width: 100%;
+    font-size: clamp(10px, 2vw, 18px);
+    text-align: center;
+    background-color: $color-principal;
+    color: $color-secundario;
+    opacity: 0.8;
+    padding: 20px 0;
+}
+
+/* 🔹 Contenedor del header */
+.container-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: $ancho-maximo;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+
+    @include respond-to("mobile-large") {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; // Alinea los elementos en la parte superior
+    }
+}
+
+/* 🔹 Logotipo */
+.logo {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin-bottom: 20px;
+
+    @include respond-to("laptop-medium") {
+        top: -8px;
+        right: 450px;
+    }
+
+    @include respond-to("mobile-large") {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        text-align: center;
+        margin-bottom: 20px;
+        order: 1; // Cambia el orden del logo en móviles
+    }
+}
+
+.logo img {
+    max-height: 420px;
+    width: auto;
+
+    @include respond-to("desktop-medium") {
+        max-height: 350px;
+        margin-top: 50px;
+        width: auto;
+    }
+
+    @include respond-to("laptop-medium") {
+        max-height: 350px;
+        
+    }
+    @include respond-to("mobile-large") {
+        max-height: 350px;
+        margin-top: 50px;
+        margin-left: -130px;
+        width: auto;
+    }
+}
+
+.logo-animado {
+    animation: moverDerecha 1s ease-in;
+
+    @include respond-to("mobile-large") {
+        animation: none;
+    }
+}
+@keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* 🔹 Menú de iconos */
+.menu-iconos {
+    position: absolute; // Posiciona el menú de iconos de forma absoluta
+    top: 20px; // Lo coloca en la parte superior
+    right: 20px; // Lo coloca en la esquina derecha
+    z-index: 20; // Asegura que esté por encima de otros elementos
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 10px; // Espacio entre los iconos
+        margin: 0;
+        padding: 0;
+    }
+
+    li img {
+        width: 30px; // Tamaño de los iconos
+        height: auto; // Mantiene la proporción
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1); // Efecto hover para los iconos
+        }
+    }
+
+    @include respond-to("mobile-large") {
+        position: static; // Cambia a posición relativa en móviles
+        margin-top: 10px; // Añade espacio en móviles
+    }
+}
